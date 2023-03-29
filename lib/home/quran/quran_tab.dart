@@ -124,29 +124,15 @@ class QuranScreen extends StatelessWidget {
     return Container(
       child: Column(
         children: [
+          SizedBox(
+            height: 40,
+          ),
           Image.asset(
             'assets/images/qur2an_screen_logo.png',
             height: 150,
           ),
-          const SizedBox(
-            height: 6,
-          ),
-          Container(
-            color: Theme.of(context).primaryColor,
-            height: 2.2,
-          ),
-          const Padding(
-            padding: EdgeInsets.all(6.0),
-            child: Text(
-              'chapter name',
-              style: TextStyle(
-                fontSize: 24,
-              ),
-            ),
-          ),
-          Container(
-            color: Theme.of(context).primaryColor,
-            height: 2.2,
+          SizedBox(
+            height: 30,
           ),
           Expanded(
             child: ListView.separated(
@@ -157,7 +143,7 @@ class QuranScreen extends StatelessWidget {
               itemCount: SuraName.length,
               separatorBuilder: (_, index) {
                 return Container(
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).accentColor,
                   width: double.infinity,
                   height: 1,
                   margin: EdgeInsets.symmetric(horizontal: 70),
