@@ -2,7 +2,10 @@ import 'package:eslami/home/hadeth/hadeth_tab.dart';
 import 'package:eslami/home/quran/quran_tab.dart';
 import 'package:eslami/home/radio/radio_tab.dart';
 import 'package:eslami/home/sebha/sebha_tab.dart';
+import 'package:eslami/home/settings/settings_tab.dart';
+import 'package:eslami/providers/settings_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home';
@@ -16,10 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var settingsProvider = Provider.of<SettingsProvider>(context);
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/main_background.png'),
+              image: AssetImage(settingsProvider.getMainBackGroundImage()),
               fit: BoxFit.fill)),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -60,6 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               label: 'Radio',
             ),
+            BottomNavigationBarItem(
+              backgroundColor: Theme.of(context).primaryColor,
+              icon: const Icon(Icons.settings),
+              label: 'Settings',
+            ),
           ],
         ),
         body: tabs[selectedIndex],
@@ -71,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
     QuranScreen(),
     HadethScreen(),
     RadioScreen(),
-    SebhaScreen()
+    SebhaScreen(),
+    Settingstab(),
   ];
 }

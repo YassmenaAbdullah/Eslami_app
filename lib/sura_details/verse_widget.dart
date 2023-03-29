@@ -15,11 +15,7 @@ class VerseWidget extends StatelessWidget {
         '$content ($index)',
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.center,
-        style: TextStyle(
-          height: 1.6,
-          fontSize: 18.0,
-          fontWeight: FontWeight.w300,
-        ),
+        style: Theme.of(context).textTheme.headline3,
       ),
     );
   }
