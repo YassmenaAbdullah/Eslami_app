@@ -32,7 +32,7 @@ class MyTheme {
         fontWeight: FontWeight.w300,
         color: Colors.black,
       ),
-      subtitle2: TextStyle(fontSize: 14, color: Colors.black),
+      subtitle2: TextStyle(fontSize: 15.4, color: Colors.black),
     ),
     primaryColor: lightPrimary,
     appBarTheme: const AppBarTheme(

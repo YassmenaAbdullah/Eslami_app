@@ -4,5 +4,9 @@
   "hadeth": "Hadeth",
   "mention": "Mention",
   "radio": "Radio",
-  "settings": "Settings"
+  "settings": "Settings",
+  "theme": "Theme",
+  "language": "Language",
+  "light": "Light",
+  "dark": "Dark"
 }

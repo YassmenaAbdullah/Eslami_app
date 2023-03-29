@@ -5,6 +5,7 @@ import 'package:eslami/home/sebha/sebha_tab.dart';
 import 'package:eslami/home/settings/settings_tab.dart';
 import 'package:eslami/providers/settings_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text('Islami'),
+          title: Text(AppLocalizations.of(context)!.app_title),
         ),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (newlySelectedIndex) {
@@ -41,33 +42,33 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).primaryColor,
               icon: const ImageIcon(AssetImage('assets/images/icon_quran.png')),
-              label: 'Quran',
+              label: AppLocalizations.of(context)!.quran,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).primaryColor,
               icon: const ImageIcon(
                 AssetImage('assets/images/icon_hadeth.png'),
               ),
-              label: 'Hadeth',
+              label: AppLocalizations.of(context)!.hadeth,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).primaryColor,
               icon: const ImageIcon(
                 AssetImage('assets/images/icon_sebha.png'),
               ),
-              label: 'Tasbeh',
+              label: AppLocalizations.of(context)!.mention,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).primaryColor,
               icon: const ImageIcon(
                 AssetImage('assets/images/icon_radio.png'),
               ),
-              label: 'Radio',
+              label: AppLocalizations.of(context)!.radio,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).primaryColor,
               icon: const Icon(Icons.settings),
-              label: 'Settings',
+              label: AppLocalizations.of(context)!.settings,
             ),
           ],
         ),

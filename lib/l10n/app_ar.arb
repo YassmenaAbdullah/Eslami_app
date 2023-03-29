@@ -4,5 +4,9 @@
   "hadeth": "الحديث",
   "mention": "التسبيح",
   "radio": "الاذاعة",
-  "settings": "الاعدادات"
+  "settings": "الاعدادات",
+  "theme": "المظهر",
+  "language": "اللغة",
+  "light": "فاتح",
+  "dark": "داكن"
 }
