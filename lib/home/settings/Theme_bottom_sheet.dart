@@ -13,6 +13,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
   Widget build(BuildContext context) {
     var settingsProvider = Provider.of<SettingsProvider>(context);
     return Container(
+      height: 400,
       padding: EdgeInsets.all(26),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
